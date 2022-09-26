@@ -11,7 +11,7 @@ class Usuario_model extends CI_ModeL {
         $this->db->from('usuario');
         $this->db->where('username',$Correo);
         $this->db->where('password',$password);
-        $this->db->where('Estado','1');
+        $this->db->where('estado','1');
         return $this->db->get();
     }
     public function lista()

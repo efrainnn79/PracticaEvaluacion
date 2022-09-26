@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Client_model extends CI_ModeL {
+class Empleado_model extends CI_ModeL {
 
     public function lista()
     {
         $this->db->select('*');
-        $this->db->from('vwcliente');
+        $this->db->from('vwempleado');
         return $this->db->get();
     }
     public function save($data){

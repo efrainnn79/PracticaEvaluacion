@@ -91,7 +91,7 @@ echo form_open_multipart('usuarios/validarusuario');
                                         
 
                                 <div class="col-lg-12 text-center">
-                                    <button style="background:#D0333A!important;" type="submit" class="btn btn-primary btn-bloc">Ingresar</button>
+                                    <button type="submit" class="btn btn-primary btn-bloc">Ingresar</button>
                                 </div>
 <?php
     echo form_close();

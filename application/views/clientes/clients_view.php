@@ -1,18 +1,18 @@
-  <!-- Begin Page Content -->
-  <div class="container-fluid">
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-<!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Administrador de clientes</h1>
-<p class="mb-4">En esta tabla se mostrara todos los clientes del sistema </p>
+            <!-- Page Heading -->
+            <h1 class="h3 mb-2 text-gray-800">Administrador de clientes</h1>
+            <p class="mb-4">En esta tabla se mostrara todos los clientes del sistema </p>
 
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Listado de clientes</h6>
-    </div>
-                          
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Listado de clientes</h6>
+                </div>
+                            
     <div class="card-body">
-                            <span class="float-right" data-toggle="tooltip" data-placement="top" title="Nuevo usuario">
+    <span class="float-right" data-toggle="tooltip" data-placement="top" title="Nuevo usuario">
                                 <button type="button" class="btn float-left bg-primary text-white" data-toggle="modal" data-target="#insertarUsuario">
                                 <i class="fas fa-plus"></i> 
                                 </button>
@@ -23,16 +23,18 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>#</th>
+                    <th>#</th>
                         <th>Nombre</th>
                         <th>Apellido paterno</th>
                         <th>Apellido materno</th>
                         <th>Email</th>
+                        <th>Sexo</th>
                         <th>Telefono</th>
+                        <th>Direccion</th>
+                        <th>Tipo cliente</th>
                         <th>Estado</th>
                         <th>Fecha Registro</th>
                         <th>Fecha Actualizacion</th>
-                        <th>Direccion</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -43,11 +45,13 @@
                         <th>Apellido paterno</th>
                         <th>Apellido materno</th>
                         <th>Email</th>
+                        <th>Sexo</th>
                         <th>Telefono</th>
+                        <th>Direccion</th>
+                        <th>Tipo cliente</th>
                         <th>Estado</th>
                         <th>Fecha Registro</th>
                         <th>Fecha Actualizacion</th>
-                        <th>Direccion</th>
                         <th>Acciones</th>
                     </tr>
                 </tfoot>
@@ -62,7 +66,22 @@
                                             <td><?php echo $row->apellidoPaterno; ?></td>
                                             <td><?php echo $row->apellidoMaterno; ?></td>
                                             <td><?php echo $row->Correo; ?></td>
+                                            <td><?php echo $row->Sexo; ?></td>
                                             <td><?php echo $row->Telefono; ?></td>
+                                            <td><?php echo $row->Direccion; ?></td>
+                                            <td>
+                                                <?php
+                                                if ($row->tipoCliente == '1') {
+                                                ?>
+                                                   <span class="badge bg-primary text-white">PUBLICO GENERAL</span>
+                                                    <?php
+                                                } else {
+                                                    ?>
+                                                        <span class="badge bg-warning text-white" >EMPRESA</span>
+                                                        <?php
+                                                    }
+                                                        ?>
+                                            </td>
                                             <td>
                                                 <?php
                                                 if ($row->Estado == '1') {
@@ -78,7 +97,7 @@
                                             </td>
                                             <td ><?php echo formatearFecha($row->FechaRegistro); ?></td>
                                              <td><?php echo formatearFecha($row->FechaActualizacion); ?></td>
-                                             <td><?php echo $row->Direccion; ?></td>
+                                            
                                              <td>
                                                     <div class="row">
                                                     <div class="col-md-6 col-6">

@@ -2,7 +2,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Clients extends CI_Controller {
+class Empleados extends CI_Controller {
 
 
     public function testAdmin()
@@ -22,12 +22,12 @@ class Clients extends CI_Controller {
             //$data2['msg'] = $this->uri->segment(3);
             //$data['infoUsuarios'] = $this->usuario_model->lista();
             $data  = array(
-                'infoClients' => $this->client_model->lista(), 
+                'infoEmpleados' => $this->empleado_model->lista(), 
             );
             $this->load->view('layout/head');
             $this->load->view('layout/menu-sidenav');
             $this->load->view('layout/menu-topnav');
-            $this->load->view('clientes/clients_view', $data);
+            $this->load->view('empleados/empleados_view', $data);
             $this->load->view('layout/footer');
        // }
     }
