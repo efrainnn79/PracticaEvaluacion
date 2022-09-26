@@ -13,7 +13,8 @@ class Client_model extends CI_ModeL {
 		return $this->db->insert("persona",$data);
 	}
 
-    public function update($id,$data){
+    public function update($id,$data)
+  {
 		$this->db->where("idPersona",$id);
 		return $this->db->update("persona",$data);
 	}
