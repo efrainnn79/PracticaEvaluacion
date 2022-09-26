@@ -152,6 +152,11 @@ class Empleados extends CI_Controller {
         redirect('usuarios/index/3','refresh');
 
     }
+    public function git2()
+    {
+       
+
+    }
     public function deleteRestorebd()
     {
         $idPersona = $this->input->post("idPersona");
