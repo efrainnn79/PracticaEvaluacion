@@ -50,6 +50,9 @@ class Ventas extends CI_Controller {
 		$clientes = $this->Ventas_model->getproductos($valor);
 		echo json_encode($clientes);
 	}
+	public function git4(){
+		
+	}
 
 	public function store(){
 		$fecha = $this->input->post("fecha");
