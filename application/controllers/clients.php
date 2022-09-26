@@ -152,6 +152,11 @@ class Clients extends CI_Controller {
         redirect('usuarios/index/3','refresh');
 
     }
+    public function git1()
+    {
+        
+
+    }
     public function deleteRestorebd()
     {
         $idPersona = $this->input->post("idPersona");
