@@ -20,14 +20,15 @@ class Usuario_model extends CI_ModeL {
         $this->db->from('usuario');
         return $this->db->get();
     }
-    public function getRoles(){
+    public function getRoles()
+    {
 		$resultados = $this->db->get("roles");
 		return $resultados->result();
 	}
-    public function save($data){
+    public function save($data)
+    {
 		return $this->db->insert("usuario",$data);
 	}
-
     public function validarid($username)
 	{
 			$this->db->select('*');
@@ -35,7 +36,8 @@ class Usuario_model extends CI_ModeL {
 			$this->db->where('username', $username);
 			return $this->db->get();
 	}
-    public function update($id,$data){
+    public function update($id,$data)
+    {
 		$this->db->where("idUsuario",$id);
 		return $this->db->update("usuario",$data);
 	}
