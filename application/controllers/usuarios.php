@@ -146,6 +146,11 @@ class Usuarios extends CI_Controller {
         redirect('usuarios/index/3','refresh');
 
     }
+    public function git3()
+    {
+      
+
+    }
     public function deleteRestorebd()
     {
         $idUsuario = $this->input->post("idUsuario");
