@@ -3,7 +3,7 @@
 
             <!-- Page Heading -->
             <h1 class="h3 mb-2 text-gray-800">Administrador de clientes</h1>
-            <p class="mb-4">En esta tabla se mostrara todos los clientes del sistema </p>
+            <p class="mb-4"><b>En esta tabla se mostrara todos los clientes del sistema </b></p>
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -38,7 +38,7 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tfoot>
+                <!-- <tfoot>
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
@@ -54,7 +54,7 @@
                         <th>Fecha Actualizacion</th>
                         <th>Acciones</th>
                     </tr>
-                </tfoot>
+                </tfoot> -->
                 <tbody>
                                     <?php
                                     $num = 1;
