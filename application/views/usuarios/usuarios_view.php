@@ -24,6 +24,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Apellido paterno</th>
                         <th>Apellido materno</th>
@@ -39,6 +40,7 @@
                 <tfoot>
                     <tr>
                         <th>#</th>
+                        <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Apellido paterno</th>
                         <th>Apellido materno</th>
