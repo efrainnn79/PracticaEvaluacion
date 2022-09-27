@@ -3,7 +3,7 @@
 
             <!-- Page Heading -->
             <h1 class="h3 mb-2 text-gray-800">Administrador de ventas</h1>
-            <p class="mb-4">En esta tabla se mostrara todas las ventas realizadas por cada distrbuidor </p>
+            <p class="mb-4"><b>En esta tabla se mostrara todas las ventas realizadas por cada distrbuidor </b></p>
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
