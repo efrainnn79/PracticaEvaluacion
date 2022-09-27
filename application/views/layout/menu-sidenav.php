@@ -8,7 +8,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3"> AMAZONAS </sup></div>
+        <div class="sidebar-brand-text mx-3"> AMAZONAS H<sub>2</sub>0</div>
     </a>
 
     <!-- Divider -->
