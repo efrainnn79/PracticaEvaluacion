@@ -24,16 +24,16 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Apellido paterno</th>
-                        <th>Apellido materno</th>
-                        <th>Precio Venta</th>
-                        <th>Cantidad</th>
-                        <th>Fecha Registro</th>
-                        <th>Cliente</th>
-                        <th>Monto Recaudado</th>
-                        <th>Acciones</th>
+                        <th><b>Imagen</b></th>
+                        <th><b>Nombre</b></th>
+                        <th><b>Apellido paterno</b></th>
+                        <th><b>Apellido materno</b></th>
+                        <th><b>Precio Venta</b></th>
+                        <th><b>Cantidad</b></th>
+                        <th><b>Fecha Registro</b></th>
+                        <th><b>Cliente</b></th>
+                        <th><b>Monto Recaudado</b></th>
+                        <th><b>Acciones</b></th>
                     </tr>
                 </thead>
                 <tfoot>
