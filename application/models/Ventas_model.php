@@ -9,8 +9,4 @@ class Ventas_model extends CI_ModeL {
         $this->db->from('vwventas');
         return $this->db->get();
     }
-    public function presentarnomas()
-    {
-      
-    }
 }
