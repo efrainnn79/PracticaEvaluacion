@@ -1,0 +1,32 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <h2>Modificar Estudiante</h2>
+
+    <?php
+    foreach ($infoestudiante->result() as $row) 
+    {
+      echo form_open_multipart('estudiante/modificarbd'); 
+      ?>
+      <input type="hidden" name="idestudiante" value="<?php echo $row->idEstudiante; ?>">
+      <input type="text" name="nombre" placeholder="Ingrese su nombre" value="<?php echo $row->nombre; ?>">
+      <input type="text" name="primerapellido" placeholder="Ingrese su primer apellido" value="<?php echo $row->primerApellido; ?>">
+      <input type="text" name="segundoapellido" placeholder="Ingrese su segundo apellido" value="<?php echo $row->segundoApellido; ?>">
+      <br>
+      <input type="file" name="userfile">
+      <br>
+      <button type="submit" class="btn btn-success">MODIFICAR ESTUDIANTE</button>
+      <?php 
+      form_close();
+    }
+    
+    ?>
+
+
+
+    </div>
+  </div>
+</div>
