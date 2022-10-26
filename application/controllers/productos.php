@@ -46,3 +46,18 @@ class Estudiante extends CI_Controller {
 
         $lista=$this->estudiante_model->agregarestudiante($data);
         redirect('estudiante/index','refresh');
+        public function eliminarbd()
+        {
+            $idestudiante=$_POST['idestudiante'];
+            $this->estudiante_model->eliminarestudiante($idestudiante);
+            redirect('estudiante/index','refresh');
+        }
+        public function modificar()
+        {
+            $idestudiante=$_POST['idestudiante'];
+            $data['infoestudiante']=$this->estudiante_model->recuperarestudiante($idestudiante);
+            
+            $this->load->view('inc/header');
+            $this->load->view('formulariomodificar',$data);
+            $this->load->view('inc/footer');
+        }
