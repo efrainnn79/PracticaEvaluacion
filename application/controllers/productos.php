@@ -61,3 +61,38 @@ class Estudiante extends CI_Controller {
             $this->load->view('formulariomodificar',$data);
             $this->load->view('inc/footer');
         }
+        public function modificarbd()
+        {
+            $idestudiante=$_POST['idestudiante'];
+            $data['nombre']=$_POST['nombre'];
+            $data['primerApellido']=$_POST['primerapellido'];
+            $data['segundoApellido']=$_POST['segundoapellido'];
+    
+            $nombrearchivo=$idestudiante.".jpg";
+    
+            //ruta donde se guardan los archivos
+            $congif['upload_path']='./uploads/';
+            //nombre del archivo
+            $config['file_name']=$nombrearchivo;
+            $direccion="./uploads/".$nombrearchivo;
+            if (file_exists($direccion)) 
+            {
+               unlink($direccion);
+    
+            }
+            //tipos de archivos permitidos
+            $config['allowed_types']='jpg';
+            $this->load->library('upload',$config);
+    
+            if(!$this->upload->do_upload())
+            {
+                $data['error']=$this->upload->display_errors();
+            }
+            else
+            {
+                $data['foto']=$nombrearchivo;  
+            }
+    
+            $this->estudiante_model->modificarestudiante($idestudiante,$data);
+            $this->upload->data();
+            redirect('estudiante/index','refresh');
