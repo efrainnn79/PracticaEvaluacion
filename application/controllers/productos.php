@@ -124,6 +124,29 @@ class Estudiante extends CI_Controller {
             $this->estudiante_model->modificarestudiante($idestudiante,$data);
             redirect('estudiante/deshabilitados','refresh');
         }
+        public function prueba()
+	{
+		$data['msg']=$this->uri->segment(3);
+		if ($this->session->userdata('login')) {
+			//el usr ya esta logueado
+			redirect('usuarios/panel','refresh');
+		}
+		else
+		{
+			//usuario no esta logueado
+			$this->load->view('inc/header');
+			$this->load->view('login',$data);
+			$this->load->view('inc/footer');
+		}
+
+       
+	}
+	// public function prueba()
+	// {
+	// 	$query=$this->db->get('estudiantes');
+	// 	$execonsulta=$query->result();
+	// 	print_r($execonsulta);
+	// }
     
     
     }
